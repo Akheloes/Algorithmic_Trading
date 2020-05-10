@@ -11,6 +11,7 @@ start = dt.datetime(2000, 1, 1)
 end = dt.datetime(2019, 12, 31)
 
 df = web.DataReader('TSLA', 'yahoo', start, end)
-head = df.head(7)
+head = df.head()
+print(head) #prints just the first five rows
 
-print(head)
+df.to_csv('../tsla.csv') #saves df content to a csv file
